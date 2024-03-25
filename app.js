@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(cors())
 
 //routes
-const routesPath = path.join(__dirname, '../Project-Expenses-tracker/BackEnd/routes'); // Construct absolute path 
+const routesPath = path.join(__dirname, './BackEnd/routes'); // Construct absolute path 
 readdirSync(routesPath).map((routeFile) => {
     const routePath = path.join(routesPath, routeFile);
     const route = require(routePath);
