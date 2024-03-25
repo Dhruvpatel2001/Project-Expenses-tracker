@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 require('dotenv').config()
-const { db } = require('../Project-Expenses-tracker/BackEnd/database/db');
+const { db } = require('./BackEnd/database/db');
 const {readdirSync} = require('fs')
 //const PORT = process.env.PORT
 const path = require('path');
