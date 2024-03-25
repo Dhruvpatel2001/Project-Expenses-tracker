@@ -4,8 +4,9 @@ const app = express()
 require('dotenv').config()
 const { db } = require('../../BackEnd/database/db');
 const {readdirSync} = require('fs')
-const PORT = process.env.PORT
+//const PORT = process.env.PORT
 const path = require('path');
+const PORT = process.env.PORT || 3000;
 
 //middlewares
 app.use(express.json())
