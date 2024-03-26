@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 require('dotenv').config()
-const { db } = require('../Project-Expenses-tracker/BackEnd/database/db');
+const { db } = require('./BackEnd/database/db');
 const {readdirSync} = require('fs')
 //const PORT = process.env.PORT
 const path = require('path');
@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(cors())
 
 //routes
-const routesPath = path.join(__dirname, '../Project-Expenses-tracker/BackEnd/routes'); // Construct absolute path 
+const routesPath = path.join(__dirname, './BackEnd/routes'); // Construct absolute path 
 readdirSync(routesPath).map((routeFile) => {
     const routePath = path.join(routesPath, routeFile);
     const route = require(routePath);
